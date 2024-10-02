@@ -5,6 +5,12 @@
 [core]
   sshCommand = "ssh -i ~/.ssh/general"
 
+[push]
+  autoSetupRemote = true
+
+[pull]
+  rebase = false
+
 # public github user - personal
 [includeIf "gitdir:~/sandbox/"]
   path = ~/.gitconfig-personal
