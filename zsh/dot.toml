@@ -1,0 +1,5 @@
+[global]
+installs = "./install-plugins.zsh"
+
+['darwin|linux'.links]
+".zshrc" = "~/.zshrc"

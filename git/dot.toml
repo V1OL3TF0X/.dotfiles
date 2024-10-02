@@ -1,0 +1,6 @@
+[global.links]
+'.gitconfig' = '~/.gitconfig'
+'.gitconfig-personal' = '~/.gitconfig-personal'
+[windows]
+installs = "winget install Git.Git"
+
