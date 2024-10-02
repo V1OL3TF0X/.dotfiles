@@ -1,0 +1,15 @@
+[user]
+  name = Mateusz Adamiec
+  email = mateusz.adamiec@appfire.com
+
+[core]
+  sshCommand = "ssh -i ~/.ssh/general"
+
+# public github user - personal
+[includeIf "gitdir:~/sandbox/"]
+  path = ~/.gitconfig-personal
+
+# public github user - personal
+[includeIf "gitdir:~/.dotfiles/"]
+  path = ~/.gitconfig-personal
+

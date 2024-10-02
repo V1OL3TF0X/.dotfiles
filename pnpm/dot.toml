@@ -1,0 +1,5 @@
+[windows]
+installs = "winget install -e --id pnpm.pnpm"
+
+['darwin|linux']
+installs = "brew install pnpm"

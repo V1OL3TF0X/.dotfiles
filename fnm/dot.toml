@@ -1,0 +1,5 @@
+[windows]
+installs = "winget install Schniz.fnm"
+
+["linux|darwin"]
+installs = "curl -fsSL https://fnm.vercel.app/install | bash"

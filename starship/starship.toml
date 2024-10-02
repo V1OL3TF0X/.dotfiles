@@ -1,0 +1,163 @@
+#                                 
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[┏$time━━━━━━━━━━━━━>](bold #fc7303) \
+$kubernetes\
+$rust$golang$python$nodejs$java$lua$c$php\
+$package[(
+┣━($battery━━)$memory_usage(━━━$username))](bold #fc7303)
+[┣━](bold #fc7303) $directory $git_branch$git_commit$git_state $git_status
+[┗━━>](bold #fc7303) $character"""
+
+[username]
+disabled = false
+
+[directory]
+truncation_length = 5
+style = "fg:cyan bold"
+format = "[$path$lock_symbol]($style)"
+
+[directory.substitutions]
+"Documents" = "󰈙"
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+style = "fg:bold purple"
+symbol = ""
+format = '[$symbol $branch]($style)'
+disabled = false
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️ ×${count}"
+stashed = "📦"
+modified = "📝 ×${count}"
+staged = "🗃️ ×${count}"
+renamed = "📛 ×${count}"
+deleted = "🗑️ ×${count}"
+style = "bright-white bold"
+format = '[\[$all_status$ahead_behind\]]($style)'
+
+[git_commit]
+commit_hash_length = 8
+style = "bold white"
+
+[git_state]
+format = '($state( $progress_current of $progress_total)) '
+
+# Start languages and tools #
+
+[c]
+symbol = ""
+style = "fg:#ffffff bg:#840a2c"
+format = '[ $symbol ($version)]($style)'
+disabled = false
+
+[kubernetes]
+style = "fg:#ffffff bg:#326ce5"
+format = '[ on ﴱ ($user on )($cluster in )$context \($namespace\) ]($style)'
+disabled = false
+
+[gcloud]
+symbol = " "
+style = "fg:#ffffff bg:#0f9d58"
+format = '[ on $symbol $account(@$domain)(\($region\)) ]($style) '
+# format = '[ on $symbol account@company.iam.gserviceaccount.com(\($region\)) ]($style) ' # for testing purposes
+disabled = false
+
+[golang]
+symbol = ""
+format = '[ $symbol](#00ADD8) [($version)](white)'
+disabled = false
+
+[java]
+symbol = ""
+style = "fg:#ffffff"
+format = '[ $symbol ($version)]($style)'
+disabled = false
+
+[lua]
+symbol = ""
+style = "fg:#ffffff bg:#000080"
+format = '[ $symbol ($version)]($style) '
+disabled = false
+
+[nodejs]
+symbol = ""
+style = "fg:#66cc33 bold"
+format = '[$symbol](#339933) [($version)]($style) '
+disabled = false
+
+[package]
+symbol = "📦"
+style = "fg:#ffffff bold"
+format = '[ $symbol ($version)]($style) '
+disabled = false
+
+[php]
+symbol = ''
+style = "fg:#ffffff bg:#4F5B93"
+format = '[ $symbol ($version)]($style)'
+disabled = false
+
+[python]
+symbol = ''
+style = "fg:#000000 bg:#ffdf76"
+format = '[ $symbol ($version)]($style)'
+disabled = false
+
+[rust]
+symbol = ""
+style = "fg:#f74c00 bold"
+format = ' [$symbol](white) [($version)]($style)'
+disabled = false
+
+[julia]
+format = " $symbol $version "
+symbol = "ஃ"
+style = "bold green"
+
+# End languages and tools #
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "fg:#ffffff"
+format = '[  $time ]($style)'
+
+
+[character]
+success_symbol = "[➜](bold green) "
+error_symbol = "[✗](bold red) "
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = "🔌"
+discharging_symbol = "⚡"
+
+[[battery.display]]
+threshold = 70
+style = "bold #fc7303"
+
+[cmd_duration]
+min_time = 10_000 # Show command duration over 10,000 milliseconds (=10 sec)
+format = " took $duration"
+ 
+[hostname]
+ssh_only = false
+format = "[<$hostname>]($style)"
+trim_at = "-"
+style = "bold dimmed white"
+disabled = false
+
+[memory_usage]
+format = "[$symbol${ram}]($style) "
+threshold = 70
+style = "bold dimmed white"
+disabled = false
