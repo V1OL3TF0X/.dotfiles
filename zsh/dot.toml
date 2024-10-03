@@ -1,5 +1,6 @@
 [global]
-installs = "./install-plugins.zsh"
+installs = "zsh ./install-plugins.zsh"
 
 ['darwin|linux'.links]
+"onedark.zsh-theme" = '{{ eval "echo ${ZSH:-~/.oh-my-zsh}" }}/themes/onedark.zsh-theme'
 ".zshrc" = "~/.zshrc"
