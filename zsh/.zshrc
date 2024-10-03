@@ -1,4 +1,5 @@
 PATH="/opt/homebrew/bin:$PATH"
+# oh-my-zsh setup
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="onedark"
 COMPLETION_WAITING_DOTS="true"
@@ -20,7 +21,8 @@ fi
 # fnm
 FNM_PATH="~/Library/Application Support/fnm"
 eval "$(fnm env --use-on-cd --shell zsh)"
-. "~/.cargo/env"
+#cargo
+export PATH="$HOME/.cargo/bin:$PATH"
 # pnpm
 export PNPM_HOME="~/Library/pnpm"
 case ":$PATH:" in
@@ -28,4 +30,8 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+# starship setup
 eval "$(starship init zsh)"
+# Set up fzf key bindings and fuzzy completion, as well as zoxide
+source <(fzf --zsh)
+eval "$(zoxide init zsh --cmd cd)"

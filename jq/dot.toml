@@ -1,0 +1,5 @@
+[windows]
+installs = "winget install jqlang.jq"
+
+['linux|darwin']
+installs = "brew install jq"

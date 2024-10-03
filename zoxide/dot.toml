@@ -1,0 +1,6 @@
+[windows]
+installs = "winget install ajeetdsouza.zoxide"
+
+['linux|darwin']
+installs = "brew install zoxide"
+
