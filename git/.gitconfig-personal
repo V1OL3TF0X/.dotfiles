@@ -3,5 +3,5 @@
   email = mattex15243@gmail.com
 
 [core]
-  sshCommand = "ssh -i ~/.ssh/id_personal"
+  sshCommand = "ssh -i ~/.ssh/personal"
 
