@@ -95,7 +95,7 @@ return {
         require('mason-lspconfig').setup {
             -- Replace the language servers listed here
             -- with the ones you want to install
-            ensure_installed = { 'tsserver', 'rust_analyzer', 'lua_ls', 'volar', 'html', 'htmx', 'gopls', 'graphql', 'lua_ls', 'powershell_es', 'tailwindcss', 'jq', 'jq-lsp' },
+            ensure_installed = { 'tsserver', 'rust_analyzer', 'lua_ls', 'volar', 'html', 'htmx', 'gopls', 'graphql', 'lua_ls', 'powershell_es', 'tailwindcss', 'jqls' },
             handlers = handlers
         }
         vim.diagnostic.config {
