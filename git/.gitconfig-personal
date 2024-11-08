@@ -2,6 +2,9 @@
   name = V1OL3TF0X
   email = mattex15243@gmail.com
 
+[pull]
+  rebase = true
+
 [core]
   sshCommand = "ssh -i ~/.ssh/personal"
 

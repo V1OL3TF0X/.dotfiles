@@ -19,12 +19,12 @@ else
   export EDITOR='nvim'
 fi
 # fnm
-FNM_PATH="~/Library/Application Support/fnm"
+FNM_PATH="$HOME/Library/Application Support/fnm"
 eval "$(fnm env --use-on-cd --shell zsh)"
 #cargo
 export PATH="$HOME/.cargo/bin:$PATH"
 # pnpm
-export PNPM_HOME="~/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;

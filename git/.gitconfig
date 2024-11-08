@@ -9,7 +9,7 @@
   autoSetupRemote = true
 
 [pull]
-  rebase = false
+  rebase = true
 
 # public github user - personal
 [includeIf "gitdir:~/sandbox/"]
