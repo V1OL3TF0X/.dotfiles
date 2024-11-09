@@ -1,0 +1,4 @@
+[submodule "nvim/nvim-conf"]
+	path = nvim/nvim-conf
+	url = git@github.com:V1OL3TF0X/nvim-conf.git
+	branch = master

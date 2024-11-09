@@ -1,0 +1,10 @@
+[windows]
+installs = "winget install Neovim.Neovim"
+[windows.links]
+"nvim-conf" = "~\\AppData\\Local\\nvim"
+
+["linux|darwin"]
+installs = "brew install neovim"
+
+["linux|darwin".links]
+"nvim-conf" = "~/.config/nvim"
