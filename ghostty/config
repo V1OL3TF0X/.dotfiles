@@ -1,0 +1,10 @@
+font-size = 20
+font-family = FiraCode Nerd Font Mono
+
+theme = OneHalfDark
+quick-terminal-animation-duration = 0
+background-opacity = 0.6
+
+macos-icon = custom-style
+macos-icon-ghost-color = #6C08FF
+macos-icon-screen-color = #FF5E12

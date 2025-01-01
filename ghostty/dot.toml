@@ -1,0 +1,6 @@
+['linux|darwin'.links]
+'config' = '~/.config/{{name}}/config'
+['linux|darwin']
+installs = "brew install --cask {{name}}"
+[windows]
+installs = false
