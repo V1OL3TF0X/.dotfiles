@@ -1,3 +1,4 @@
+depends = ['luarocks']
 [windows]
 installs = "winget install Neovim.Neovim"
 [windows.links]
@@ -8,3 +9,4 @@ installs = "brew install neovim"
 
 ["linux|darwin".links]
 "nvim-conf" = "~/.config/nvim"
+
