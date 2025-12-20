@@ -1,6 +1,6 @@
 [user]
-  name = Mateusz Adamiec
-  email = mateusz.adamiec@appfire.com
+  name = V1OL3TF0X
+  email = mattex15243@gmail.com
 
 [core]
   sshCommand = "ssh -i ~/.ssh/general"
@@ -10,12 +10,4 @@
 
 [pull]
   rebase = true
-
-# public github user - personal
-[includeIf "gitdir:~/sandbox/"]
-  path = ~/.gitconfig-personal
-
-# public github user - personal
-[includeIf "gitdir:~/.dotfiles/"]
-  path = ~/.gitconfig-personal
 
