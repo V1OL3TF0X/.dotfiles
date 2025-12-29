@@ -1,5 +1,0 @@
-[windows]
-installs = "winget install \"Lua for Windows\""
-
-["linux|darwin"]
-installs = "brew install luarocks"
