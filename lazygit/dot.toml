@@ -1,0 +1,5 @@
+[windows]
+installs = "winget install -e --id=JesseDuffield.lazygit"
+
+["linux|darwin"]
+installs = "brew install lazygit"
