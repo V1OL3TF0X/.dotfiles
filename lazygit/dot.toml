@@ -1,5 +1,5 @@
 [windows]
-installs = "winget install -e --id=JesseDuffield.lazygit"
+installs = "winget install -e JesseDuffield.lazygit JesseDuffield.Lazydocker"
 
 ["linux|darwin"]
-installs = "brew install lazygit"
+installs = "brew install lazygit && brew install jesseduffield/lazynpm/lazynpm && brew install jesseduffield/lazydocker/lazydocker"

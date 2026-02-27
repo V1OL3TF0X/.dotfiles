@@ -1,6 +1,0 @@
-[windows]
-installs = "winget install fzf"
-
-['linux|darwin']
-installs = "brew install fzf"
-

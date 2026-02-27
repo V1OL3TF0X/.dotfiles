@@ -1,0 +1,2 @@
+depends = ['rust']
+install = "cargo install --locked tree-sitter-cli"
