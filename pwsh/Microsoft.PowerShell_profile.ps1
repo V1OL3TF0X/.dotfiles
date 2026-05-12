@@ -1,6 +1,8 @@
-Invoke-Expression (& { (zoxide init powershell | Out-String) })
+Invoke-Expression (& { (zoxide init --cmd cd powershell | Out-String) })
 
-Set-Alias -Name cd -Value z
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 
 Register-ArgumentCompleter -CommandName z -ScriptBlock {
     param($commandName, $parameterName, $wordToComplete) 

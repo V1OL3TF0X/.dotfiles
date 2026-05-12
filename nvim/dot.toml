@@ -1,3 +1,4 @@
+[global]
 depends = ['treesitter']
 [windows]
 installs = "winget install Neovim.Neovim"
